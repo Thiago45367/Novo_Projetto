@@ -6,6 +6,12 @@ class Pessoa:
         self.idade = idade
         self.sexo = sexo
 
+    def set_idade(self, idade):
+        if idade < 0:
+            self._idade = 0
+        else:
+            self._idade = idade                    
+
     def __str__(self) -> str:
         return (
             f"\nNome: {self.nome}"
